@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chris Watson – Resume</title>
+  <meta name="description" content="Resume website for Chris Watson: security integration leader, sales & operations, EOS practitioner." />
+  <meta property="og:title" content="Chris Watson – Resume" />
+  <meta property="og:description" content="Security integration leader with a passion for protecting people and the things they care about." />
+  <meta property="og:type" content="website" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Ccircle cx='64' cy='64' r='62' fill='%23000'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-size='72' fill='%23fff' font-family='Arial, Helvetica, sans-serif'%3EC%3C/text%3E%3Ctext x='50%25' y='98%25' dominant-baseline='middle' text-anchor='middle' font-size='28' fill='%23fff' font-family='Arial, Helvetica, sans-serif'%3EW%3C/text%3E%3C/svg%3E" />
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #0f172a; --muted: #475569; --link: #0ea5e9; --card: #f8fafc; --border: #e2e8f0; --accent: #10b981;
+    }
+    @media (prefers-color-scheme: dark){
+      :root { --bg: #0b1220; --fg: #e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; --accent:#34d399; }
+    }
+    [data-theme="light"]{ --bg:#ffffff; --fg:#0f172a; --muted:#475569; --link:#0ea5e9; --card:#f8fafc; --border:#e2e8f0; --accent:#10b981; }
+    [data-theme="dark"]{ --bg:#0b1220; --fg:#e5e7eb; --muted:#94a3b8; --link:#38bdf8; --card:#0f172a; --border:#1f2937; --accent:#34d399; }
+
+    html, body { height: 100%; }
+    body { margin:0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--fg); }
+    .container { max-width: 980px; margin: 0 auto; padding: 24px; }
+    header { position: sticky; top: 0; backdrop-filter: blur(8px); background: color-mix(in srgb, var(--bg) 80%, transparent); border-bottom: 1px solid var(--border); z-index: 20; }
+    nav { display:flex; align-items:center; gap:16px; justify-content:space-between; }
+    .nav-links { display:flex; gap: 16px; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); text-decoration: none; padding:8px 10px; border-radius: 10px; }
+    .nav-links a:hover { background: var(--card); color: var(--fg); }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.3px; }
+    .brand svg { width:32px; height:32px; }
+
+    h1 { font-size: clamp(28px, 4vw, 44px); margin: 16px 0 8px; }
+    h2 { font-size: clamp(22px, 3vw, 28px); margin: 28px 0 8px; }
+    p.lead { color: var(--muted); font-size: 18px; max-width: 70ch; }
+
+    .grid { display:grid; gap:20px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card { background: var(--card); border: 1px solid var(--border); padding: 18px; border-radius: 16px; }
+    .tag { display:inline-block; font-size:12px; padding:4px 10px; border-radius:999px; background: color-mix(in srgb, var(--accent) 16%, transparent); color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+    .muted { color: var(--muted); }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border: 1px solid var(--border); background: var(--card); border-radius: 12px; text-decoration:none; color: var(--fg); font-weight:600; }
+    .btn.primary { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+    .btn:hover { transform: translateY(-1px); }
+    .stack-sm > * + * { margin-top: 8px; }
+    .stack > * + * { margin-top: 16px; }
+    .stack-lg > * + * { margin-top: 24px; }
+
+    .footer { border-top:1px solid var(--border); margin-top: 40px; padding-top: 20px; color: var(--muted); font-size: 14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+
+    /* Print-friendly */
+    @media print {
+      header, .btn, .theme-toggle { display:none !important; }
+      .card { break-inside: avoid; }
+      body { background:white; color:black; }
+    }
+  </style>
+  <script>
+    // Theme toggle
+    const applyTheme = (t)=>document.documentElement.setAttribute('data-theme', t);
+    const saved = localStorage.getItem('theme');
+    if(saved){ applyTheme(saved); }
+    function toggleTheme(){
+      const now = document.documentElement.getAttribute('data-theme');
+      const next = now === 'dark' ? 'light' : 'dark';
+      applyTheme(next); localStorage.setItem('theme', next);
+    }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Chris Watson",
+    "jobTitle": "Security Integration Leader",
+    "description": "Sales & operations exec building trusted, scalable security solutions (video, access, intrusion). EOS/Traction practitioner.",
+    "address": {"@type":"PostalAddress","addressLocality":"Kansas City, MO"},
+    "url": "https://example.github.io/chris-watson",
+    "sameAs": ["https://www.linkedin.com/in/", "mailto:watssmart@gmail.com"]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M7 12h10M12 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <span>Chris Watson</span>
+        </div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#achievements">Wins</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <button class="btn theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌓</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="stack-lg">
+      <h1>Security leader focused on protecting people and what they care about</h1>
+      <p class="lead">Commercial security integration executive (video surveillance, access control, intrusion). I build high‑performing teams, scalable processes, and trusted partner ecosystems to keep facilities and communities safe.</p>
+      <div class="stack">
+        <div class="grid">
+          <div class="card stack-sm">
+            <strong>What I bring</strong>
+            <ul class="muted">
+              <li>15+ years across integrators & manufacturers (Avigilon/Motorola, ADS).</li>
+              <li>Sales leadership, revenue growth, GTM with channel partners.</li>
+              <li>Operations rigor via EOS/Traction: scorecards, Rocks, L10s.</li>
+            </ul>
+          </div>
+          <div class="card stack-sm">
+            <strong>Recent focus</strong>
+            <ul class="muted">
+              <li>School safety programs & grants (SVPP/SRSA guidance).</li>
+              <li>Standardizing proposals (D‑Tools), RMR growth, service SLAs.</li>
+              <li>Enablement: playbooks, KPIs, and onboarding frameworks.</li>
+            </ul>
+          </div>
+          <div class="card stack-sm">
+            <strong>Highlights</strong>
+            <ul class="muted">
+              <li>Spoke at regional trade shows & industry events.</li>
+              <li>Grew teams; mentored reps to exceed goals.</li>
+              <li>Led community initiatives: product & time donations to 501(c)(3)s.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="stack">
+          <a class="btn primary" href="#contact">Get in touch</a>
+          <a class="btn" href="resume.pdf" download>Download PDF Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="stack-lg">
+      <h2>Experience</h2>
+      <div class="stack">
+        <div class="card stack-sm">
+          <div class="tag">Most recent</div>
+          <strong>American Digital Security (ADS) — Vice President / Sales & Operations</strong>
+          <div class="muted">Midwest • 2023–2025</div>
+          <ul class="muted">
+            <li>Owned revenue & GP targets across multiple locations (KC, Wichita, Junction City, etc.).</li>
+            <li>Built EOS cadence (L10s, Rocks, Scorecards); standardized KPIs across Sales, Ops, and Finance.</li>
+            <li>Drove GTM with Avigilon/Verkada/Pelco/OpenEye/DMP; created spiffs and multi‑year license motions.</li>
+          </ul>
+        </div>
+        <div class="card stack-sm">
+          <strong>Avigilon (Motorola Solutions) — Regional Sales</strong>
+          <div class="muted">Central US • Prior role</div>
+          <ul class="muted">
+            <li>New logo acquisition; scaled partner ecosystem and distributor relationships.</li>
+            <li>Closed complex, multi‑stakeholder opportunities; supported architects & end users.</li>
+          </ul>
+        </div>
+        <div class="card stack-sm">
+          <strong>Other leadership roles — Integrator & Channel</strong>
+          <ul class="muted">
+            <li>Hired, developed, and coached high‑performing sales teams.</li>
+            <li>Launched enablement: playbooks, pricing frameworks, and ROI tools.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements" class="stack-lg">
+      <h2>Achievements & Involvement</h2>
+      <div class="grid">
+        <div class="card stack-sm">
+          <strong>Speaking</strong>
+          <p class="muted">Regular presenter at regional trade shows on school safety, video analytics, and access control best practices.</p>
+        </div>
+        <div class="card stack-sm">
+          <strong>Community</strong>
+          <p class="muted">Organized volunteer installs and product donations for local 501(c)(3)s; encouraged team‑wide participation.</p>
+        </div>
+        <div class="card stack-sm">
+          <strong>Team Growth</strong>
+          <p class="muted">Greatest professional win: mentoring teammates to surpass personal and professional goals.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="stack-lg">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card"><strong>Leadership</strong><p class="muted">Sales strategy, forecasting, hiring, coaching, cross‑functional collaboration.</p></div>
+        <div class="card"><strong>Security Stack</strong><p class="muted">Avigilon Unity/Alta, Verkada, Pelco, OpenEye, DMP, Salto, Mercury, ACC/ACM.</p></div>
+        <div class="card"><strong>Process</strong><p class="muted">EOS/Traction, KPIs & scorecards, MEDDIC/Challenger, standard work.</p></div>
+        <div class="card"><strong>Tools</strong><p class="muted">D‑Tools, NetSuite, Shepherd CMMS, System Surveyor, Paycom.</p></div>
+      </div>
+    </section>
+
+    <section id="contact" class="stack-lg">
+      <h2>Contact</h2>
+      <div class="card">
+        <p class="muted">Open to Director/VP Sales, Channel, or Security Operations roles. Remote or Midwest‑based.</p>
+        <ul class="stack-sm muted">
+          <li>📧 <a href="mailto:watssmart@gmail.com">watssmart@gmail.com</a></li>
+          <li>🔗 <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li>📄 <a href="resume.pdf" download>Download full resume (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-label="FAQ" class="stack-lg">
+      <h2>FAQ</h2>
+      <details class="card"><summary><strong>Why security?</strong></summary><p class="muted">I’m most successful when I’m passionate about the mission. Helping keep people—and what they care about—safe fuels that passion.</p></details>
+      <details class="card"><summary><strong>Work style</strong></summary><p class="muted">Builder‑coach. I set clear goals, remove friction, and grow people through candid feedback and recognition.</p></details>
+      <details class="card"><summary><strong>Availability</strong></summary><p class="muted">Immediate, flexible on travel; comfortable with remote teams across time zones.</p></details>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <span>© <span id="year"></span> Chris Watson</span>
+    <span class="muted">Made with a single HTML file. Free to host on GitHub Pages.</span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
